@@ -13,5 +13,5 @@
   "decodeme")
 
 (defn decypher [cypher message]
-  "decypherme")
+  "drme")
 
