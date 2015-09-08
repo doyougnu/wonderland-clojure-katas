@@ -11,3 +11,7 @@
 
 (defn decode [keyword message]
   "decodeme")
+
+(defn decypher [cypher message]
+  "decypherme")
+
