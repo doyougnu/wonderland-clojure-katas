@@ -6,6 +6,9 @@
         ret (drop n alphabet)]
     (flatten (conj sub ret))))
 
+(defn genTable []
+  (map (fn [a b] {a (rotateAlpha b)}) "abcdefghijklmnopqrstuvwxyz" (range 25)))
+
 (defn encode [keyword message]
   "ssfeme")
 
