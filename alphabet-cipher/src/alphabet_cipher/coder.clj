@@ -6,8 +6,11 @@
         ret (drop n alphabet)]
     (flatten (conj sub ret))))
 
+<<<<<<< HEAD
 (defn enumerateCipher []
   (map (fn [a b] (sorted-map a (rotateAlpha b))) "abcdefghijklmnopqrstuvwxyz" (range 26)))
+=======
+>>>>>>> de7f3ab33a0e6488938516bd56c532a2b059c47f
 
 (defn encode [keyword message]
   "ssfeme")
