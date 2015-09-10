@@ -10,7 +10,7 @@
   (map (fn [a b] {a (rotateAlpha b)}) "abcdefghijklmnopqrstuvwxyz" (range 25)))
 
 (defn encode [keyword message]
-  "ssfeme")
+  (let [kmess (reduce concat (repeat (count keyword) message))]))
 
 (defn decode [keyword message]
   "decodeme")
