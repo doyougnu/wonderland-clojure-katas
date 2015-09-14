@@ -22,8 +22,12 @@
       (<= keycnt msgcnt) (take msgcnt (reduce concat (repeat msgcnt keyword))))))
 
 (defn encode [keyword message]
+<<<<<<< HEAD
   (let [nk (encodeHelper keyword message)
         ]))
+=======
+  (let [kmess (reduce concat (repeat (count keyword) message))]))
+>>>>>>> 877aebc30b02ec0d938c7a31ced2208f5309ee3d
 
 (defn decode [keyword message]
     "decodeme")
