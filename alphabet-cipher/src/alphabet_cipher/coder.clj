@@ -21,13 +21,15 @@
       (> keycnt msgcnt) (take msgcnt (concat keyword))
       (<= keycnt msgcnt) (take msgcnt (reduce concat (repeat msgcnt keyword))))))
 
+(defn strToKey [charlist]
+  (map #(keyword (str %)) charlist))
+
 (defn encode [keyword message]
-<<<<<<< HEAD
-  (let [nk (encodeHelper keyword message)
-        ]))
-=======
-  (let [kmess (reduce concat (repeat (count keyword) message))]))
->>>>>>> 877aebc30b02ec0d938c7a31ced2208f5309ee3d
+  (let [keyword  (strToKey (encodeHelper keyword message))
+        message (strToKey (map identity message))
+        ciphertable (enumerateCipher)
+        alphamap (alphaMap)]
+    (reduce str (map (fn [k m] (nth  (ciphertable m) (alphamap k))) keyword message))))
 
 (defn decode [keyword message]
     "decodeme")
