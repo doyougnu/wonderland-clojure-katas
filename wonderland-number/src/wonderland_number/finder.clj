@@ -21,4 +21,4 @@
     (every? (partial = n) mults)))
 
 (defn wonderland-number []
-  (filter wonderland-number-helper (range 100000 180000)))
+  (first (filter wonderland-number-helper (range 100000 180000))))
