@@ -16,8 +16,14 @@
   ;;other "shore"
   (let [[[shore boat dest]] state]
     (if (inVector? shore item)
-      [[(removeElem shore item)] [boat] [(conj dest item)]]
+      [[(removeElem shore item) boat (conj dest item)]]
      state)))
+
+(defn takeItem [state item]
+  (let [[[shore boat dest]] state]
+    (if (inVector? dest item)
+      [[(conj shore item) boat (removeElem dest item)]]
+      state)))
 
 (defn river-crossing-plan []
   start-pos)
